@@ -88,16 +88,6 @@ describe('Planet', function() {
       expect((earth.orbitAngle).toFixed(4)).toBe('0.0172')
     });
 
-    it('#addMonth adds an arc month to orbit', function(){
-      earth.addMonth(sun)
-      expect((earth.orbitAngle).toFixed(3)).toBe('0.524')
-    });
-
-    it('#addYear adds an arc year to orbit', function(){
-      earth.addYear(sun)
-      expect((earth.orbitAngle).toPrecision(2)).toBe((360 * Math.PI / 180).toPrecision(2))
-    });
-
   });
 
 });
