@@ -1,9 +1,15 @@
 require 'sinatra'
 
-get '/' do
-  File.read(File.join('public','views', 'home.html'))
-end
+class SolarSystemWeb < Sinatra::Base
 
-get '/solar-system' do
-  File.read(File.join('public','views', 'solar-system.html'))
+  get '/' do
+    File.read(File.join('public','views', 'home.html'))
+  end
+
+  get '/solar-system' do
+    File.read(File.join('public','views', 'solar-system.html'))
+  end
+
+  run! if app_file == $0
+  
 end
